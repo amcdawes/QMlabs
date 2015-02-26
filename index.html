@@ -32,20 +32,23 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h1>
-<a id="quantum-mechanics---ipy-notebooks" class="anchor" href="#quantum-mechanics---ipy-notebooks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Quantum Mechanics - Ip[y]: notebooks</h1>
+        <a id="quantum-mechanics---ipy-notebooks" class="anchor" href="#quantum-mechanics---ipy-notebooks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Quantum Mechanics - Ip[y]: notebooks</h1>
 
-<p>These are a mix of in-class activities (Chapter title) or longer lab-length activities (Lab title). The labs are numbered in order, and the title corresponds to book chapter titles.</p>
-<p>You can browse the full list via <a href="http://nbviewer.ipython.org/github/amcdawes/QMlabs/tree/master/">nbviewer</a>, or select specific notebooks below.</p>
+        <p>These are a mix of in-class activities (Chapter title) or longer lab-length activities (Lab title). The labs are numbered in order, and the title corresponds to book chapter titles.</p>
+        <p>You can browse the full list via <a href="http://nbviewer.ipython.org/github/amcdawes/QMlabs/tree/master/">nbviewer</a>, or select specific notebooks below.</p>
 
-<ul>
-    <li><a href="http://nbviewer.ipython.org/github/amcdawes/QMlabs/blob/master/Lab%201%20-%20Vectors%20and%20Matrices%20-%20Solutions.ipynb">Lab 1 - Vectors and Matrices</a></li>
-    <li><a href="http://nbviewer.ipython.org/github/amcdawes/QMlabs/blob/master/Lab%202%20-%20Quantum%20States.ipynb">Lab 2 - Quantum States</a></li>
-    <li><a href="http://nbviewer.ipython.org/github/amcdawes/QMlabs/blob/master/Lab%203%20-%20Operators.ipynb">Lab 3 - Operators</a></li>
-    <li><a href="http://nbviewer.ipython.org/github/amcdawes/QMlabs/blob/master/Lab%204%20-%20Measurements.ipynb">Lab 4 - Measurements</a></li>
-    <li><a href="http://nbviewer.ipython.org/github/amcdawes/QMlabs/blob/master/Lab%205%20-%20Two-particle%20systems.ipynb">Lab 5 - Two-Particle Systems</a></li>
-    <li><a href="http://nbviewer.ipython.org/github/amcdawes/QMlabs/blob/master/Lab%206%20-%20Time%20Evolution.ipynb">Lab 6 - Time Evolution</a></li>
-    <li><a href="http://nbviewer.ipython.org/github/amcdawes/QMlabs/blob/master/Lab%207%20-%20SHO.ipynb">Lab 7 - Simple Harmonic Oscillator States</a></li>
-</ul>
+        <ul>
+            <li><a href="http://nbviewer.ipython.org/github/amcdawes/QMlabs/blob/master/Lab%201%20-%20Vectors%20and%20Matrices%20-%20Solutions.ipynb">Lab 1 - Vectors and Matrices</a></li>
+            <li><a href="http://nbviewer.ipython.org/github/amcdawes/QMlabs/blob/master/Lab%202%20-%20Quantum%20States.ipynb">Lab 2 - Quantum States</a></li>
+            <li><a href="http://nbviewer.ipython.org/github/amcdawes/QMlabs/blob/master/Lab%203%20-%20Operators.ipynb">Lab 3 - Operators</a></li>
+            <li><a href="http://nbviewer.ipython.org/github/amcdawes/QMlabs/blob/master/Lab%204%20-%20Measurements.ipynb">Lab 4 - Measurements</a></li>
+            <li><a href="http://nbviewer.ipython.org/github/amcdawes/QMlabs/blob/master/Lab%205%20-%20Two-particle%20systems.ipynb">Lab 5 - Two-Particle Systems</a></li>
+            <li><a href="http://nbviewer.ipython.org/github/amcdawes/QMlabs/blob/master/Lab%206%20-%20Time%20Evolution.ipynb">Lab 6 - Time Evolution</a></li>
+            <li><a href="http://nbviewer.ipython.org/github/amcdawes/QMlabs/blob/master/Lab%207%20-%20SHO.ipynb">Lab 7 - Simple Harmonic Oscillator States</a></li>
+        </ul>
+        
+        <p>Note, I have not updated all of these to use best practices for matplotlib. In general, it is a hack to use the <code>%pylab inline</code> command. That will load a lot of things you don't need and can override some other variables if loaded later. A better approach is to run <code>import matplotlib.pyplot as plt</code> and then import any other packages from numpy, for example: <code>from numpy import sqrt,pi,cos,sin,arange,exp</code>. If you make this change in any of these notebooks, you will need to use <code>plt.plot</code> in place of any <code>plot</code> calls.</p>
+        <p>Please <a href="http://amcdawes.com/contact.html">contact me</a> with any questions, I am happy to support these. I need them to be working for my own purposes too!</p>
       </section>
     </div>
 
