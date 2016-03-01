@@ -5,6 +5,8 @@ Ipython notebooks for a Quantum Mechanics class. The material is based on (and i
 
 These are a mix of in-class activities (Chapter title) or longer lab-length activities (Lab title). The labs are numbered in order, and the title corresponds to book chapter titles.
 
+To run interactive versions of these notebooks, please: [![Binder](http://mybinder.org/badge.svg)](http://mybinder.org/repo/amcdawes/QMlabs)
+
 The notebooks make use of the [QuTiP package](http://qutip.org) (Quantum Toolbox in Python). For additional documentation on this requirement, please see the project page. Installation of QuTiP should be handled by your python package manager:
 
 Anaconda (mac/win): `conda install qutip`
