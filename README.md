@@ -1,7 +1,7 @@
-Quantum Mechanics - Jupyter notebooks
+Quantum Mechanics in Python
 ======
 
-Jupyter notebooks for a Quantum Mechanics class. The material is based on (and in sequence with) Mark Beck's book "Quantum Mechanics: Theory and Experiment" but the notebooks can be used independently and with or without a QM textbook.
+This is a set of Jupyter notebooks (running python) for use in a Quantum Mechanics class. The material is based on (and in sequence with) Mark Beck's book "Quantum Mechanics: Theory and Experiment" but the notebooks can be used independently and with or without a QM textbook.
 
 These are a mix of in-class activities (organized by Chapter title) or longer lab-length activities ("Lab" title). The labs are numbered in order, and the title corresponds to book chapter titles.
 
