@@ -1,2 +1,2 @@
-Cython
-qutip
+cython>=0.27
+qutip=4.2
