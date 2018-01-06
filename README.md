@@ -6,6 +6,7 @@ This is a set of Jupyter notebooks (running python) for use in a Quantum Mechani
 These are a mix of in-class activities (organized by Chapter title) or longer lab-length activities ("Lab" title). The labs are numbered in order, and the title corresponds to book chapter titles.
 
 To run interactive versions of these notebooks, please: [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/amcdawes/QMlabs/master)
+
 The notebooks make use of the [QuTiP package](http://qutip.org) (Quantum Toolbox in Python). For additional documentation on this requirement, please see the [project page](http://qutip.org). Installation of QuTiP should be handled by your python package manager:
 
 Anaconda (mac/win): `conda install qutip`
