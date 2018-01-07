@@ -7,6 +7,11 @@ These are a mix of in-class activities (organized by Chapter title) or longer la
 
 To run interactive versions of these notebooks, please: [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/amcdawes/QMlabs/master)
 
+## Examples:
+The file `AAPTWM2018.pdf` contains slides for my talk presented at the AAPT Winter Meeting in 2018. Additionally, a longer version of the talk was presented at PyCon 2017 and is available on [YouTube](https://www.youtube.com/watch?v=1ze-Zzn4TAA&feature=youtu.be&t=2m32s). 
+
+## Installation:
+
 The notebooks make use of the [QuTiP package](http://qutip.org) (Quantum Toolbox in Python). For additional documentation on this requirement, please see the [project page](http://qutip.org). Installation of QuTiP should be handled by your python package manager:
 
 Anaconda (mac/win): `conda install qutip`
