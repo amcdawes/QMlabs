@@ -1,0 +1,69 @@
+name: Test Notebooks
+
+on:
+  schedule:
+    # Run on the 1st of every month at 08:00 UTC
+    - cron: "0 8 1 * *"
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up conda environment
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          environment-file: environment.yml
+          activate-environment: qutip-env
+          miniforge-version: latest
+          use-mamba: true
+
+      - name: Execute notebooks
+        shell: bash -l {0}
+        run: |
+          mkdir -p /tmp/nb-results
+          for nb in *.ipynb; do
+            echo "::group::Testing $nb"
+            outfile="/tmp/nb-results/$(basename "$nb" .ipynb).json"
+            set +e
+            jupyter nbconvert \
+              --to notebook \
+              --execute \
+              --ExecutePreprocessor.timeout=180 \
+              --output "/tmp/nb-results/executed.ipynb" \
+              "$nb" 2>"$outfile.stderr"
+            STATUS=$?
+            set -e
+            if [ $STATUS -ne 0 ]; then
+              echo "FAILED: $nb"
+              # Capture the last 60 lines of stderr as the error summary
+              tail -60 "$outfile.stderr" > "$outfile.err"
+              echo "$nb" >> /tmp/nb-results/failed.txt
+            else
+              echo "PASSED: $nb"
+            fi
+            echo "::endgroup::"
+          done
+
+      - name: File issues for failing notebooks
+        if: always()
+        shell: bash -l {0}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          if [ ! -f /tmp/nb-results/failed.txt ]; then
+            echo "All notebooks passed. No issues to file."
+            exit 0
+          fi
+          python .github/scripts/file_issues.py \
+            --failed-list /tmp/nb-results/failed.txt \
+            --error-dir /tmp/nb-results \
+            --repo "$REPO"
