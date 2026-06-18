@@ -2,9 +2,12 @@ name: qutip-env
 channels:
   - conda-forge
 dependencies:
-  - python
+  - python>=3.11
   - numpy
   - scipy
   - cython
   - matplotlib
-  - qutip
+  - sympy
+  - "qutip>=5"
+  - jupyter
+  - nbconvert
