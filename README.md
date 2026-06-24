@@ -1,6 +1,9 @@
 Quantum Mechanics in Python
 ======
 
+## Bug-fix only
+I am no longer actively teaching so this content is maintained only for bug-fixes. I have migrated it to use QuTip 5 but I don't plan to continue to expand the scope of the content. Instead, I will be using this content as the starting point for a more general [QuTip book](https://github.com/amcdawes/qutip-book)
+
 [![Test Notebooks](https://github.com/amcdawes/QMlabs/actions/workflows/test-notebooks.yml/badge.svg)](https://github.com/amcdawes/QMlabs/actions/workflows/test-notebooks.yml)
 
 This is a set of Jupyter notebooks (running python) for use in a Quantum Mechanics class. The material is based on (and in sequence with) Mark Beck's book "Quantum Mechanics: Theory and Experiment" but the notebooks can be used independently and with or without a QM textbook.
