@@ -14,10 +14,16 @@ The file `AAPTWM2018.pdf` contains slides for my talk presented at the AAPT Wint
 
 ## Installation:
 
-The notebooks make use of the [QuTiP package](http://qutip.org) (Quantum Toolbox in Python). For additional documentation on this requirement, please see the [project page](http://qutip.org). Installation of QuTiP should be handled by your python package manager:
+The notebooks require [QuTiP 5](http://qutip.org) (Quantum Toolbox in Python). For additional documentation on this requirement, please see the [project page](http://qutip.org).
 
-Anaconda (mac/win): `conda install qutip`
+I recommend using [uv](https://docs.astral.sh/uv/) to manage your Python environment and install dependencies:
 
-Mac/Linux: `pip install qutip`
+```
+uv pip install qutip
+```
 
-I personally recommend the [Anaconda Scientific Python Distribution](https://store.continuum.io/cshop/anaconda/) for ease of installation on Windows machines. I use it on Mac OSX as well. Linux package managers (and `pip`) generally make the same type of python package management straightforward but Anaconda (and the conda package manager) can be very useful in Linux as well.
+Or with plain pip:
+
+```
+pip install "qutip>=5"
+```
